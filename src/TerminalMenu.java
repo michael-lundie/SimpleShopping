@@ -12,7 +12,7 @@ public class TerminalMenu extends BaseMenu {
 
         // Loop main menu until
         while(menuChoice != EXIT) {
-            showMainMenu();
+            buildMainMenu();
             menuChoice = promptMainMenuChoice();
             chooseMenuOption(menuChoice);
         }
@@ -57,21 +57,21 @@ public class TerminalMenu extends BaseMenu {
     }
 
     @Override
-    protected void showMainMenu() {
+    protected void buildMainMenu() {
 
         if(mainMenu == null || mainMenu.equals("")) {
             StringBuilder menuBuilder = new StringBuilder();
 
             for(int i = 0; i < Constants.getMainMenuOptions().length; i++) {
                 menuBuilder.append("[").append((i+1)).append("] ")
-                        .append(Constants.getMainMenuOptions()[i])
-                        .append("\t");
+                        .append(Constants.getMainMenuOptions()[i]);
+                if(i != Constants.getMainMenuOptions().length-1) {
+                    menuBuilder.append("\t");
+                }
             }
 
-            menuBuilder.append("[").append(EXIT).append("] ").append(Constants.MENU_EXIT);
             mainMenu = menuBuilder.toString();
         }
-
         System.out.println(mainMenu);
     }
 

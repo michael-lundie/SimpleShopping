@@ -1,4 +1,7 @@
+import javax.swing.*;
+
 public class GuiMenu extends BaseMenu{
+    private String[] mainMenu = new String[9];
 
     public GuiMenu(ShoppingList shoppingList) {
         super(shoppingList);
@@ -20,12 +23,14 @@ public class GuiMenu extends BaseMenu{
     }
 
     @Override
-    protected void showMainMenu() {
+    protected void buildMainMenu() {
 
     }
 
     @Override
     protected int promptMainMenuChoice() {
-        return 0;
+//        return JOptionPane.showOptionDialog(null, "Select from ..","Notebook Menu",
+//                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, alternatives, alternatives[0]);
+    return 0;
     }
 }
