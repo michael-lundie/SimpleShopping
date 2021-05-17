@@ -3,7 +3,11 @@ public class Constants {
     final static String MENU_OPTION_VIEW = "View Items";
     final static String MENU_OPTION_ADD = "Add Items";
     final static String MENU_OPTION_DELETE = "Delete Items";
-    static final String MENU_EXIT = "Exit";
+    final static String MENU_EXIT = "Exit";
+
+    final static String MAIN_MENU_TITLE = "Simple Shopping Menu";
+    final static String MAIN_MENU_MESSAGE = "Choose an Option";
+
 
     /**
      * Method in which menu options are made available as an array.

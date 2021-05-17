@@ -8,6 +8,13 @@ public class TerminalMenu extends BaseMenu {
     public TerminalMenu(ShoppingList shoppingList) {
         super(shoppingList);
         this.scanner = new Scanner(System.in);
+    }
+
+    /**
+     * Begins the main menu loop. User should always return to the main
+     * menu unless exit is chosen.
+     */
+    public void startMenu() {
         int menuChoice = 0;
 
         // Loop main menu until

@@ -3,7 +3,8 @@ public class TestShopping {
     public static void main(String[] args) {
         ShoppingList shoppingList = new ShoppingList();
         addTestItems(shoppingList);
-        new TerminalMenu(shoppingList);
+        TerminalMenu terminalMenu = new TerminalMenu(shoppingList);
+        terminalMenu.startMenu();
     }
 
     private static void addTestItems(ShoppingList shoppingList) {
