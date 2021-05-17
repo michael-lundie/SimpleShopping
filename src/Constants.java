@@ -7,6 +7,11 @@ public class Constants {
 
     final static String MAIN_MENU_TITLE = "Simple Shopping Menu";
     final static String MAIN_MENU_MESSAGE = "Choose an Option";
+    final static String DIALOG_LIST_TITLE = "Shopping List";
+
+    final static String ARG_TERMINAL = "term";
+    final static String ARG_GUI = "gui";
+    final static String ARG_TEST= "test";
 
 
     /**

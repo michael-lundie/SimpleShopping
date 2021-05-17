@@ -46,4 +46,8 @@ public class ShoppingList {
             return true;
         }
     }
+
+    public ArrayList<String> getShoppingList() {
+        return shoppingList;
+    }
 }

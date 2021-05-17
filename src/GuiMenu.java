@@ -7,9 +7,38 @@ public class GuiMenu extends BaseMenu{
         super(shoppingList);
     }
 
+    public void startMainMenu() {
+        int menuChoice = 0;
+
+        while(menuChoice != EXIT) {
+            menuChoice = promptMainMenuChoice();
+            chooseMenuOption(menuChoice);
+        }
+    }
+
     @Override
     protected void chooseMenuOption(int promptMainMenuInput) {
+        switch(promptMainMenuInput) {
+            case 1:
+                showItemsList();
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case EXIT:
+                System.out.println("Exiting...");
+                break;
+            default:
+                break;
+        }
+    }
 
+    private void showItemsList() {
+        JTextArea outputArea = new JTextArea();
+        outputArea.setText( String.join("\n", shoppingList.getShoppingList()) );
+        JOptionPane.showMessageDialog( null, outputArea,
+                Constants.DIALOG_LIST_TITLE, JOptionPane.INFORMATION_MESSAGE );
     }
 
     @Override
