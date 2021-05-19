@@ -10,8 +10,9 @@ public class GuiMenu extends BaseMenu{
     public void startMainMenu() {
         int menuChoice = 0;
 
-        while(menuChoice != EXIT) {
+        while(menuChoice != EXIT-1) {
             menuChoice = promptMainMenuChoice();
+            System.err.println("menu choice was : " + menuChoice);
             chooseMenuOption(menuChoice);
         }
     }
@@ -19,14 +20,14 @@ public class GuiMenu extends BaseMenu{
     @Override
     protected void chooseMenuOption(int promptMainMenuInput) {
         switch(promptMainMenuInput) {
-            case 1:
+            case 0:
                 showItemsList();
+                break;
+            case 1:
                 break;
             case 2:
                 break;
-            case 3:
-                break;
-            case EXIT:
+            case EXIT-1:
                 System.out.println("Exiting...");
                 break;
             default:
